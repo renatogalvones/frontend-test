@@ -43,34 +43,38 @@ node app.js
 Agora você já possui a configuração necessária, podemos começar.
 
 ## Estrutura
-O repositório possui a seguinte estrutura:
-├── config/
-│   └── index.js
-├── controllers/
-│   └── index.js
-├── routes
-│   └── index.js
-├── services
-│   ├── index.js
-│   └── templatePath.js
-├── views/
-├── public/
-│   ├── images/
-│   ├── javascript/
-│   ├── styles/
-│   └── json/
-│       └── talk.json
-├── .bowerrc
-├── .gitignore
-├── app.js
-├── package.json
-└── README.md
+O repositório possui a seguinte estrutura:  
+```md
+├── config/ 
+│   └── index.js 
+├── controllers/ 
+│   └── index.js  
+├── routes  
+│   └── index.js  
+├── services  
+│   ├── index.js  
+│   └── templatePath.js  
+├── views/  
+├── public/  
+│   ├── images/  
+│   ├── javascript/  
+│   ├── styles/  
+│   └── json/  
+│       └── talk.json  
+├── .bowerrc  
+├── .gitignore  
+├── app.js  
+├── package.json  
+└── README.md  
+```
 
 ### Rotas
 Com a aplicação em execução você pode criar seus templates na pasta **views**, onde cada nível de pasta até o arquivo compõe a rota, por exemplo a seguinte estrutura:
+```md
 ├── views
     ├── home/
         └── chat.html
+```
 
 Será acessada por: http://localhost:3000/site/home/chat/
 
