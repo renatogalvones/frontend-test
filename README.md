@@ -61,6 +61,9 @@ O repositório possui a seguinte estrutura:
 │   ├── styles/  
 │   └── json/  
 │       └── talk.json  
+├── layout/  
+│   ├── test-front.psd  
+│   └── test-front-320.psd  
 ├── .bowerrc  
 ├── .gitignore  
 ├── app.js  
