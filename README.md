@@ -35,7 +35,7 @@ Para executar a task
 npm run startNodemon
 ```
 
-Escolha qual le agradar mais, ou execute manualmente a aplicação:
+Escolha qual lhe agradar mais, ou execute manualmente a aplicação:
 ```sh
 node app.js
 ```
@@ -43,32 +43,32 @@ node app.js
 Agora você já possui a configuração necessária, podemos começar.
 
 ## Estrutura
-O repositório possui a seguinte estrutura:  
+O repositório possui a seguinte estrutura:
 ```md
-├── config/ 
-│   └── index.js 
-├── controllers/ 
-│   └── index.js  
-├── routes  
-│   └── index.js  
-├── services  
-│   ├── index.js  
-│   └── templatePath.js  
-├── views/  
-├── public/  
-│   ├── images/  
-│   ├── javascript/  
-│   ├── styles/  
-│   └── json/  
-│       └── talk.json  
-├── layout/  
-│   ├── test-front.psd  
-│   └── test-front-320.psd  
-├── .bowerrc  
-├── .gitignore  
-├── app.js  
-├── package.json  
-└── README.md  
+├── config/
+│   └── index.js
+├── controllers/
+│   └── index.js
+├── routes
+│   └── index.js
+├── services
+│   ├── index.js
+│   └── templatePath.js
+├── views/
+├── public/
+│   ├── images/
+│   ├── javascript/
+│   ├── styles/
+│   └── json/
+│       └── talk.json
+├── layout/
+│   ├── test-front.psd
+│   └── test-front-320.psd
+├── .bowerrc
+├── .gitignore
+├── app.js
+├── package.json
+└── README.md
 ```
 
 ### Rotas
