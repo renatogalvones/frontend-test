@@ -1,0 +1,239 @@
+.header {
+  background: #FFF url("/static/images/header.jpg") center top no-repeat;
+  height: 71px;
+}
+
+.footer {
+  background: #FFF url("/static/images/footer.jpg") center top no-repeat;
+  background-size: cover;
+  height: 44px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.fll {
+  float: left;
+}
+
+.flr {
+  float: right;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.icon {
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  font: normal 16px "Arial",sans-serif;
+  color: #666666;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.chat {
+  width: 600px;
+  height: 545px;
+  background-color: #FFF;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  overflow: hidden;
+  transition: bottom .7s ease-in-out;
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.09);
+}
+.chat.closed {
+  bottom: -500px;
+}
+.chat .chat-header {
+  background-color: #005da4;
+  height: 7%;
+  color: #FFF;
+  font-style: italic;
+  font-size: 18px;
+  padding: 1.5% 1% 0;
+  position: absolute;
+  width: 100%;
+}
+.chat .chat-header .chat-control {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  height: 100%;
+}
+.chat .chat-wrapper {
+  position: absolute;
+  left: 0;
+  top: 7%;
+  width: 100%;
+  height: 93%;
+}
+.chat .chat-wrapper .chat-body {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 82%;
+  padding: 15px;
+}
+.chat .chat-wrapper .chat-body .chat-messages {
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li {
+  margin: 7px 0;
+  position: relative;
+  overflow: hidden;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.support .message-box {
+  float: right;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.support .message {
+  float: right;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.support .info {
+  left: 2%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.support .is-read {
+  display: none;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.support .arrow {
+  border-top: 10px solid #FFF;
+  border-right: 10px solid #DDD;
+  border-bottom: 10px solid #FFF;
+  border-left: none;
+  left: -10px;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .message-box {
+  float: left;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .message {
+  float: left;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .profile-picture {
+  right: 0;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .info {
+  right: 2%;
+  text-align: right;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .employer {
+  display: none;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul li.guest .arrow {
+  border-top: 10px solid #FFF;
+  border-right: none;
+  border-bottom: 10px solid #FFF;
+  border-left: 10px solid #DDD;
+  right: -10px;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .message-box {
+  width: 81%;
+  position: relative;
+  padding: 2% 2% 4% 2%;
+  background-color: #DDD;
+  margin-bottom: 1%;
+  min-height: 70px;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .is-read {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .arrow {
+  position: absolute;
+  top: 5%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .info {
+  position: absolute;
+  bottom: 5%;
+  width: 35%;
+  font-size: 14px;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .message {
+  width: 65%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .profile-picture {
+  width: 16%;
+  position: absolute;
+  top: 0;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .profile-picture img {
+  width: 100%;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .no-profile {
+  display: none;
+}
+.chat .chat-wrapper .chat-body .chat-messages ul .timestamp {
+  font-size: 11px;
+}
+.chat .chat-wrapper .chat-write {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 18%;
+  padding: 15px;
+  border-top: solid 1px #dcdcdc;
+}
+.chat .chat-wrapper .chat-write textarea {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  color: #666666;
+  font-size: 14px;
+  border: solid 1px #dcdcdc;
+}
+
+@media screen and (max-width: 600px) {
+  .chat {
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .icon-minimize {
+    display: none;
+  }
+
+  .chat .chat-wrapper .chat-body .chat-messages ul li .message-box {
+    width: 71%;
+  }
+  .chat .chat-wrapper .chat-body .chat-messages ul li .message-box .message {
+    width: 100%;
+  }
+  .chat .chat-wrapper .chat-body .chat-messages ul li .message-box .info {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .chat .chat-wrapper .chat-body .chat-messages ul li .profile-picture {
+    width: 22%;
+  }
+}

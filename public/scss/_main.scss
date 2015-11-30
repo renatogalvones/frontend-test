@@ -1,0 +1,18 @@
+@import "normalize";
+@import "colors";
+@import "header";
+@import "footer";
+@import "helpers";
+
+html,body{
+  height: 100%;
+  font: normal 16px "Arial",sans-serif;
+  color: $grey-dark;
+  margin: 0;
+}
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+

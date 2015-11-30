@@ -1,0 +1,203 @@
+@import "main";
+
+// CHAT
+.chat{
+  width: 600px;
+  height: 545px;
+  background-color: $white;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  overflow: hidden;
+  transition: bottom .7s ease-in-out;
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.09);
+  -moz-box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.09);
+  box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.09);
+  &.closed{
+    bottom: -500px;
+  }
+
+  .chat-header{
+    background-color: $blue;
+    height: 7%;
+    color: $white;
+    font-style: italic;
+    font-size: 18px;
+    padding: 1.5% 1% 0;
+    position: absolute;
+    width: 100%;
+    .chat-control{
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      height: 100%;
+    }
+  }
+
+  .chat-wrapper{
+    position: absolute;
+    left: 0;
+    top: 7%;
+    width: 100%;
+    height: 93%;
+    .chat-body{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 82%;
+      padding: 15px;
+      .chat-messages{
+        overflow: scroll;
+        height: 100%;
+        width: 100%;
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li{
+            margin: 7px 0;
+            position: relative;
+            overflow: hidden;
+            &.support{
+              .message-box{
+                float: right;
+              }
+              .message{
+                float: right;
+              }
+              .info{
+                left: 2%;
+              }
+              .is-read{
+                display: none;
+              }
+              .arrow{
+                border-top: 10px solid $white;
+                border-right: 10px solid $grey;
+                border-bottom: 10px solid $white;
+                border-left: none;
+                left: -10px;
+              }
+            }
+            &.guest{
+              .message-box{
+                float: left;
+              }
+              .message{
+                float: left;
+              }
+              .profile-picture{
+                right: 0;
+              }
+              .info{
+                right: 2%;
+                text-align: right;
+              }
+              .employer{
+                display: none;
+              }
+              .arrow{
+                border-top: 10px solid $white;
+                border-right: none;
+                border-bottom: 10px solid $white;
+                border-left: 10px solid $grey;
+                right: -10px;
+              }
+            }
+          }
+          .message-box{
+            width: 81%;
+            position: relative;
+            padding: 2% 2% 4% 2%;
+            background-color: $grey;
+            margin-bottom: 1%;
+            // overflow: hidden;
+            min-height: 70px;
+          }
+          .is-read{
+            position: absolute;
+            bottom: 5%;
+            left: 2%;
+          }
+          .arrow{
+            position: absolute;
+            top: 5%;
+          }
+          .info{
+            position: absolute;
+            bottom: 5%;
+            width: 35%;
+            font-size: 14px;
+          }
+          .message{
+            width: 65%;
+          }
+
+          .profile-picture{
+            width: 16%;
+            position: absolute;
+            top: 0;
+            img{
+              width: 100%;
+            }
+          }
+          .no-profile{
+            display: none;
+          }
+
+          .timestamp{
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    .chat-write{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 18%;
+      padding: 15px;
+      border-top: solid 1px $grey-light-strong;
+      textarea{
+        width: 100%;
+        height: 100%;
+        background-color: $grey-light;
+        color: $grey-dark;
+        font-size: 14px;
+        border: solid 1px $grey-light-strong;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 600px){
+  .chat{
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .icon-minimize{
+    display: none;
+  }
+
+  .chat .chat-wrapper .chat-body .chat-messages ul li {
+    .message-box{
+      width: 71%;
+      .message{
+        width: 100%;
+      }
+      .info{
+        position: relative;
+        width: 100%;
+        margin-top: 2%;
+      }
+    }
+    .profile-picture{
+      width: 22%;
+    }
+  }
+}
